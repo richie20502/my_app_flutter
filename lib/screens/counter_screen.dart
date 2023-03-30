@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CounterScreen extends StatelessWidget {
+class CounterScreen extends StatefulWidget {
   const CounterScreen({super.key});
 
+  @override
+  State<CounterScreen> createState() => _CounterScreenState();
+}
+
+class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
     TextStyle fontSize30 = const TextStyle(fontSize: 30);

@@ -7,8 +7,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('esta'),
+          title: const Center(child: Text('esta')),
+          elevation: 0.0,
         ),
-        body: const Center(child: Text('Hola mundo')));
+        body: const Center(
+            child: Column(
+          children: [
+            Text('Hola mundo'),
+            Text('Hola mundo'),
+          ],
+        )));
   }
 }

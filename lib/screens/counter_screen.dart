@@ -8,10 +8,10 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
+  int counter = 10;
   @override
   Widget build(BuildContext context) {
     TextStyle fontSize30 = const TextStyle(fontSize: 30);
-    int counter = 10;
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text('nav counter')),
@@ -38,6 +38,7 @@ class _CounterScreenState extends State<CounterScreen> {
         child: const Icon(Icons.add),
         onPressed: () {
           counter++;
+          setState(() {});
         },
       ),
     );

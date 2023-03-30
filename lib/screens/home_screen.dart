@@ -5,6 +5,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: const Center(child: Text('Hola mundo')));
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('esta'),
+        ),
+        body: const Center(child: Text('Hola mundo')));
   }
 }

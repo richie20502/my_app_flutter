@@ -34,34 +34,38 @@ class _CounterScreenState extends State<CounterScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          FloatingActionButton(
-            child: const Icon(Icons.exposure_minus_1_outlined),
-            onPressed: () {
-              if (counter != 0) {
-                counter--;
-                setState(() {});
-              }
-            },
-          ),
-          FloatingActionButton(
-            child: const Icon(Icons.exposure_outlined),
-            onPressed: () {
-              counter = 0;
-              setState(() {});
-            },
-          ),
-          FloatingActionButton(
-            child: const Icon(Icons.exposure_plus_1_outlined),
-            onPressed: () {
-              counter++;
-              setState(() {});
-            },
-          ),
-        ],
-      ),
+      floatingActionButton: const CunstomWidgetFloat(),
+    );
+  }
+}
+
+class CunstomWidgetFloat extends StatelessWidget {
+  const CunstomWidgetFloat({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.exposure_minus_1_outlined),
+
+          //onPressed: () => setState(() => (counter != 0) ? counter-- : 0),
+        ),
+        FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.exposure_outlined),
+          //onPressed: () => setState(() => counter = 0),
+        ),
+        FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.exposure_plus_1_outlined),
+          //onPressed: () => setState(() => counter++)
+        ),
+      ],
     );
   }
 }

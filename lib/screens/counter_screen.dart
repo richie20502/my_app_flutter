@@ -44,8 +44,21 @@ class _CounterScreenState extends State<CounterScreen> {
               setState(() {});
             },
           ),
+          const SizedBox(
+            width: 20,
+          ),
           FloatingActionButton(
-            child: const Icon(Icons.add),
+            child: const Icon(Icons.exposure_outlined),
+            onPressed: () {
+              counter = 0;
+              setState(() {});
+            },
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.exposure_plus_1_outlined),
             onPressed: () {
               counter++;
               setState(() {});

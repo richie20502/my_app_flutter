@@ -33,19 +33,18 @@ class _CounterScreenState extends State<CounterScreen> {
           ],
         ),
       ),
-      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton(
             child: const Icon(Icons.exposure_minus_1_outlined),
             onPressed: () {
-              counter--;
-              setState(() {});
+              if (counter != 0) {
+                counter--;
+                setState(() {});
+              }
             },
-          ),
-          const SizedBox(
-            width: 20,
           ),
           FloatingActionButton(
             child: const Icon(Icons.exposure_outlined),
@@ -53,9 +52,6 @@ class _CounterScreenState extends State<CounterScreen> {
               counter = 0;
               setState(() {});
             },
-          ),
-          const SizedBox(
-            width: 20,
           ),
           FloatingActionButton(
             child: const Icon(Icons.exposure_plus_1_outlined),
